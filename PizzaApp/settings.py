@@ -36,6 +36,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'userapp',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -179,3 +180,14 @@ SWAGGER_SETTINGS = {
 }
 
 FLW_SEC_KEY = os.getenv("FLW_SEC_KEY")
+
+# jazzmin configurations
+JAZZMIN_SETTINGS = {
+    "site_title": "Pizza App",
+    "site_header": "Pizza App",
+    "site_brand": "Pizza App",
+    "site_copyright": "pizza-app.com",
+    }
+JAZZMIN_UI_TWEAKS = {
+    "theme": "darkly",
+}
