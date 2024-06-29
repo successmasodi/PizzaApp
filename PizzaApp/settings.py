@@ -189,5 +189,5 @@ JAZZMIN_SETTINGS = {
     "site_copyright": "pizza-app.com",
     }
 JAZZMIN_UI_TWEAKS = {
-    "theme": "darkly",
+    "theme": "cyborg",
 }
