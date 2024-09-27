@@ -152,16 +152,8 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DJOSER = {
-    "PASSWORD_RESET_CONFIRM_URL": "http://localhost:8000/auth/user/reset_password_confirm/{uid}/{token}/",
-    'ACTIVATION_URL': 'http://localhost:8000/auth/activate/{uid}/{token}',
-    'USERNAME_RESET_CONFIRM_URL': 'http://localhost:8000/auth/username/reset/confirm/{uid}/{token}',
-
-    'SEND_ACTIVATION_EMAIL': True,
-    'SEND_CONFIRMATION_EMAIL': True,
-    'USERNAME_CHANGED_EMAIL_CONFIRMATION': True,
-    'PASSWORD_CHANGED_EMAIL_CONFIRMATION': True,
     'SERIALIZERS': {
-        'user_create': "customuser.serializers.MyUserCreateSerializer"
+        'user_create': "userapp.serializers.MyUserCreateSerializer"
     }
 }
 REST_FRAMEWORK = {
@@ -197,15 +189,5 @@ JAZZMIN_SETTINGS = {
     "site_copyright": "pizza-app.com",
     }
 JAZZMIN_UI_TWEAKS = {
-    "theme": "darkly",
+    "theme": "cyborg",
 }
-
-# email
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_SSL = True
-EMAIL_USE_TSL = False
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 465
-EMAIL_HOST_USER = os.getenv("EMAIL")
-EMAIL_HOST_PASSWORD = os.getenv("PASSWORD")
-DEFAULT_FROM_EMAIL = os.getenv("EMAIL")
