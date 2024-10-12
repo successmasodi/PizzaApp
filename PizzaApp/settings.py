@@ -104,23 +104,23 @@ WSGI_APPLICATION = 'PizzaApp.wsgi.application'
 #     }
 # }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': os.getenv("NAME"),
-#         'USER': os.getenv("USER"),
-#         'PASSWORD': os.getenv("DB_PASSWORD"),
-#         'HOST': os.getenv("HOST"),
-#         'PORT': os.getenv("PORT"),
-#         'SSL_MODE': os.getenv("SSL_MODE"),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv("NAME"),
+        'USER': os.getenv("USER"),
+        'PASSWORD': os.getenv("DB_PASSWORD"),
+        'HOST': os.getenv("HOST"),
+        'PORT': os.getenv("PORT"),
+        'SSL_MODE': os.getenv("SSL_MODE"),
+    }
+}
 
 # USING DJ DATABASE URL
-import dj_database_url
-DATABASES = {
-    'default': dj_database_url.parse(os.getenv("EXTERNAL_URL"))
-}
+# import dj_database_url
+# DATABASES = {
+#     'default': dj_database_url.parse(os.getenv("EXTERNAL_URL"))
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
