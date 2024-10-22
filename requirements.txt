@@ -14,8 +14,9 @@ djangorestframework-simplejwt==5.3.1
 djoser==2.2.2
 drf-nested-routers==0.93.5
 drf-yasg==1.21.7
+gunicorn==23.0.0
 idna==3.7
-inflection==0.5.1
+inflection==0.5.1git 
 oauthlib==3.2.2
 packaging==24.0
 pillow==10.3.0
