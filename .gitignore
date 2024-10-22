@@ -1,6 +1,6 @@
 .idea
 venv/
-.env
+
 db.sqlite3
 image/
 **/migrations/*.py
