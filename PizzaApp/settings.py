@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG")
 
-ALLOWED_HOSTS = ["134.209.21.134", "localhost", "127.0.0.1", "10.106.0.2"]
+ALLOWED_HOSTS = ["pizzaapp.api.fluxdevs.com","134.209.21.134", "localhost", "127.0.0.1", "10.106.0.2"]
 
 
 # Application definition
@@ -69,7 +69,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': True,
+           'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
